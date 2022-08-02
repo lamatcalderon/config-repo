@@ -25,3 +25,16 @@ spring:
           uri: lb://organizationservice
           predicates:
             - Path=/organization/**
+
+management:
+  endpoint:
+    env:
+      post:
+        enabled: true
+    restart:
+      enabled: true
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
