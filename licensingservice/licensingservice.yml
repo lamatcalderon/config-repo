@@ -1,5 +1,4 @@
 server.port: 8081
-spring.application.name: licensing-service
 
 example.property: I AM THE DEFAULT
 spring.jpa.database: POSTGRESQL
