@@ -3,9 +3,9 @@ server.port: 8081
 example.property: I AM THE PRD
 spring.jpa.database: POSTGRESQL
 spring.jpa.show-sql: true
-spring.datasource.url: jdbc:postgresql://ec2-107-22-122-106.compute-1.amazonaws.com:5432/d5lhu5ukmune8p
-spring.datasource.username: vnfnakllsffkub
-spring.datasource.password: 9809a59dc5adaff22d5f05a02ecca43be43852e250b595b10c9eb6180cf1d5cb
+spring.datasource.url: jdbc:postgresql://kesavan.db.elephantsql.com:5432/ylqgzzbm
+spring.datasource.username: ylqgzzbm
+spring.datasource.password: aIDVOm0TV8lLuKhhDsWLKBzzoD0IPXkF
 spring.datasource.testWhileIdle: true
 spring.datasource.validationQuery: SELECT 1
 spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -13,3 +13,12 @@ spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
 eureka.client.fetch-registry: true
 eureka.client.register-with-eureka: true
 eureka.client.service-url.default-zone: http://localhost:8761/eureka
+
+resilience4j.circuitbreaker.instances.licensesCB.registerHealthIndicator: true
+resilience4j.circuitbreaker.instances.licensesCB.slidingWindowSize: 10
+resilience4j.circuitbreaker.instances.licensesCB.permittedNumberOfCallsInHalfOpenState: 3
+resilience4j.circuitbreaker.instances.licensesCB.slidingWindowType: TIME_BASED
+resilience4j.circuitbreaker.instances.licensesCB.minimumNumberOfCalls: 4
+resilience4j.circuitbreaker.instances.licensesCB.waitDurationInOpenState: 5s
+resilience4j.circuitbreaker.instances.licensesCB.failureRateThreshold: 50
+resilience4j.circuitbreaker.instances.licensesCB.eventConsumerBufferSize: 10
