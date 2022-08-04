@@ -10,21 +10,21 @@ eureka:
     instance:
       hostname: localhost
 
-spring:
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: licensingservice
-          uri: lb://licensingservice
-          predicates:
-            - Path=/licensing/**
-        - id: organizationservice
-          uri: lb://organizationservice
-          predicates:
-            - Path=/v1/organizations/**
+#spring:
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#      routes:
+#        - id: licensingservice
+#          uri: lb://licensingservice
+#          predicates:
+#            - Path=/licensing/**
+#        - id: organizationservice
+#          uri: lb://organizationservice
+#          predicates:
+#            - Path=/v1/organizations/**
 
 management:
   endpoint:
