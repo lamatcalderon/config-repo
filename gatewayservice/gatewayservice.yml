@@ -16,6 +16,7 @@ spring:
       discovery:
         locator:
           enabled: true
+          lowerCaseServiceId: true
 #      routes:
 #        - id: licensingservice
 #          uri: lb://licensingservice
