@@ -24,7 +24,7 @@ spring:
         - id: organizationservice
           uri: lb://organizationservice
           predicates:
-            - Path=/organization/**
+            - Path=/v1/organizations/**
 
 management:
   endpoint:
