@@ -20,7 +20,7 @@ spring:
         - id: licensingservice
           uri: lb://licensingservice
           predicates:
-            - Path=/licensing/**
+            - Path=/v1/organizations/{organizationId}/licenses/**
         - id: organizationservice
           uri: lb://organizationservice
           predicates:
