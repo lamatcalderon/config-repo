@@ -13,3 +13,12 @@ spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
 eureka.client.fetch-registry: true
 eureka.client.register-with-eureka: true
 eureka.client.service-url.default-zone: http://localhost:8761/eureka
+
+resilience4j.circuitbreaker.instances.licensesCB.registerHealthIndicator: true
+resilience4j.circuitbreaker.instances.licensesCB.slidingWindowSize: 10
+resilience4j.circuitbreaker.instances.licensesCB.permittedNumberOfCallsInHalfOpenState: 3
+resilience4j.circuitbreaker.instances.licensesCB.slidingWindowType: TIME_BASED
+resilience4j.circuitbreaker.instances.licensesCB.minimumNumberOfCalls: 4
+resilience4j.circuitbreaker.instances.licensesCB.waitDurationInOpenState: 5s
+resilience4j.circuitbreaker.instances.licensesCB.failureRateThreshold: 50
+resilience4j.circuitbreaker.instances.licensesCB.eventConsumerBufferSize: 10
