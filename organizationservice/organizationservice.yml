@@ -10,6 +10,12 @@ spring.datasource.testWhileIdle: true
 spring.datasource.validationQuery: SELECT 1
 spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
 
+spring.cloud.function.definition: consumer;producer
+spring.cloud.stream.bindings.producer-out-0.destination: orgChangeTopic
+spring.cloud.stream.bindings.producer-out-0.producer.useNativeEncoding: true
+spring.cloud.stream.bindings.consumer-in-0.destination: orgChangeTopic
+spring.cloud.stream.bindings.consumer-in-0.consumer.useNativeEncoding: true
+
 eureka.client.fetch-registry: true
 eureka.client.register-with-eureka: true
 eureka.client.service-url.default-zone: http://localhost:8761/eureka
