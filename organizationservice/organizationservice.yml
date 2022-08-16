@@ -10,11 +10,13 @@ spring.datasource.testWhileIdle: true
 spring.datasource.validationQuery: SELECT 1
 spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
 
-spring.cloud.function.definition: consumer;producer
+spring.cloud.function.definition: producer
 spring.cloud.stream.bindings.producer-out-0.destination: orgChangeTopic
-spring.cloud.stream.bindings.producer-out-0.producer.useNativeEncoding: true
-spring.cloud.stream.bindings.consumer-in-0.destination: orgChangeTopic
-spring.cloud.stream.bindings.consumer-in-0.consumer.useNativeEncoding: true
+spring.cloud.stream.bindings.producer-out-0.producer.use-native-encoding: true
+spring.cloud.stream.kafka.binder.brokers: localhost:9092
+#spring.cloud.stream.bindings.consumer-in-0.destination: orgChangeTopic
+#spring.cloud.stream.bindings.consumer-in-0.consumer.use-native-encoding: true
+
 
 eureka.client.fetch-registry: true
 eureka.client.register-with-eureka: true
