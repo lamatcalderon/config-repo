@@ -11,9 +11,12 @@ spring.datasource.validationQuery: SELECT 1
 spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
 
 spring.cloud.function.definition: producer
-spring.cloud.stream.bindings.producer-out-0.destination: orgChangeTopic
+spring.cloud.stream.bindings.producer-out-0.destination: gkbklxxu-default
 spring.cloud.stream.bindings.producer-out-0.producer.use-native-encoding: true
-spring.cloud.stream.kafka.binder.brokers: localhost:9092
+spring.kafka.bootstrap-servers: moped.srvs.cloudkafka.com:9094, moped.srvs.cloudkafka.com
+spring.kafka.properties.security.protocol: SASL_SSL
+spring.kafka.properties.sasl.mechanism: SCRAM-SHA-256
+spring.kafka.properties.sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="gkbklxxu" password="2hHFxpRLHPW513lj1qqPa3cJNcef8SkQ";
 #spring.cloud.stream.bindings.consumer-in-0.destination: orgChangeTopic
 #spring.cloud.stream.bindings.consumer-in-0.consumer.use-native-encoding: true
 
